@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel=stylesheet href="styles.css">
+
+    <title>Which Character?</title>
+  </head>
+  <body class="bg-dark samuraibackground">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 mr-auto">
+                  <div class="card card-body text-center mt-5">
+                      <h1 class="heading display-5 pb-3">Who Should You Main in <span style="display: inline-block;"><img src="img/templogo.jpg" class="card-logo" width="50%"></span></h1>
+                  </div>
+                  <div class="card card-body mt-3">
+                  <form id="character-form">
+                    <div class="form-group">
+                      <p>Select Your Preferred Character Gender</p>
+                      <select id="character-gender" name="character-gender" class="btn btn-secondary">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <p>What's Your Preferred Playstyle?</p>
+                      <select id="playstyle-preference" name="playstyle-preference" class="btn btn-secondary">
+                        <option value="Rushdown">Rushdown</option>
+                        <option value="Field Control">Field Control</option>
+                        <option value="Keep Away">Keep Away</option>
+                        <option value="Patience">Patience</option>
+                        <option value="Trickster">Trickster</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <p>Which Is Most Important?</p>
+                      <select id="fighting-style" name="fighting-style" class="btn btn-secondary">
+                        <option value="Speed">Speed</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Balance">Balance</option>
+                        <option value="Style">Style</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" value="Submit Answers" class="btn btn-dark btn-block">
+                     </div>
+                  </form>
+                  </div>
+              </div>
+              <div class="col-md-6 mr-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Result</h1>
+                </div>
+                <div class="card card-body mt-3 result-card">
+                  <h3 class="character-name" id="character-name"></h3>
+                  <h4 class="character-description" id="character-description"></h4>
+                  <div class="character-image" id="character-image"></div>
+                  <div id="loading">
+                    <img src="img/loading.gif" alt="">
+                   </div>
+                  </div>
+          </div>
+      </div>
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
