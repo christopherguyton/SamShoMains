@@ -20,7 +20,7 @@ const maleCharacterArray = [{
         id: 2,
         name: 'Galford',
         imgFile: 'img/characterimages/Galford.png',
-        moveSet: '',
+        moveSet: 'Hi hi',
         description: ''
     },
     {
@@ -193,15 +193,19 @@ const femaleCharacterArray = [{
 
 //Create Result Nodes
 let img = document.createElement('img');
-
+//Disable Move List Button
+document.getElementById('move-list').style.display = 'none';
 //Submit Character
 
 document.getElementById('character-form').addEventListener('submit', function (e) {
     document.getElementById('loading').style.display = 'block';
-
     setTimeout(characterResults, 2000);
     e.preventDefault();
 });
+
+//Get Move List
+document.getElementById('move-list').addEventListener('click', moveList); 
+
 
 
 function characterResults() {
@@ -211,7 +215,11 @@ function characterResults() {
     selectedGender = document.getElementById('character-gender').value;
     selectedPlaystyle = document.getElementById('playstyle-preference').value;
     selectedFightingStyle = document.getElementById('fighting-style').value;
+
+    //Loading
     document.getElementById('loading').style.display = 'none';
+
+
     //Assign Character (MALE)
 
     if (selectedGender === 'Male' && selectedPlaystyle === 'Keep Away' && selectedFightingStyle === 'Balance') {
@@ -418,4 +426,17 @@ function characterResults() {
         img.src = femaleCharacterArray[2].imgFile;
         document.getElementById('character-image').appendChild(img);
     }
+    document.getElementById('submit-button').value = "Reset Form";
+    document.getElementById('move-list').style.display = 'block';
+    disableChoices();
 }
+
+function disableChoices() {
+    document.getElementById('character-gender').disabled = 'disabled';
+    document.getElementById('fighting-style').disabled = 'disabled';
+    document.getElementById('playstyle-preference').disabled = 'disabled';
+}
+
+
+
+
